@@ -47,19 +47,19 @@ $(document).ready(function () {
                             $('#movie__upload-progress').css('width', movieWhileProcessing.percent + '%');
                             $('#movie__upload-progress').html(movieWhileProcessing.percent + '%');
 
-                            if (movieWhileProcessing.percent == 100) {
+                            if (movieWhileProcessing.percent == 100) { //هذه خاصة عند وصول عملية رفع الفيديو ل 100%
                                 clearInterval(interval); //break interval
                                 $('#movie__upload-status').html('Done Processing');
                                 $('#movie__upload-progress').parent().css('display', 'none');
-                                $('#movie__submit-btn').css('display', 'block');
-                                const element = document.getElementById('movie__properties');
-                                const btn = document.getElementById('movie__submit-btn');
-                                btn.addEventListener('click', event => {
-                                    event.preventDefault();
-                                    element.submit();
-                                    // actual logic, e.g. validate the form
-                                    console.log('submitted.');
-                                });
+                                // $('#movie__submit-btn').css('display', 'block');
+                                // const element = document.getElementById('movie__properties');
+                                // const btn = document.getElementById('movie__submit-btn');
+                                // btn.addEventListener('click', event => {
+                                //     event.preventDefault();
+                                //     element.submit();
+                                //     // actual logic, e.g. validate the form
+                                //     console.log('submitted.');
+                                // });
                             }
                         },
                     });//end of ajax call
