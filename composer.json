@@ -17,7 +17,7 @@
         "laravel/socialite": "^4.3",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^1.1",
-        "pbmedia/laravel-ffmpeg": "^5.0",
+        "pbmedia/laravel-ffmpeg": "5.0",
         "santigarcor/laratrust": "5.2.*"
     },
     "require-dev": {

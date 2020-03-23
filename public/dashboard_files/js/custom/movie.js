@@ -33,13 +33,16 @@ $(document).ready(function () {
             cache: false,
             success: function (movieBeforeProcessing) {
 
-                var interval = setInterval(function () {
+                var interval = setInterval(function () { //setInterval هذه عبارى عن فانكشن بتنفذ امر كل فترة زمنية
 
                     $.ajax({
-                        url: `/dashboard/movies/${movieBeforeProcessing.id}`,
+                        url: `/dashboard/movies/${movieBeforeProcessing.id}`, //هذا عبارة عن الراوات لل show
                         method: 'GET',
                         success: function (movieWhileProcessing) {
 
+                            // console.log(movieWhileProcessing.percent)
+
+//هنا قمت باستدعاء ال id الخاص لكل label
                             $('#movie__upload-status').html('Processing');
                             $('#movie__upload-progress').css('width', movieWhileProcessing.percent + '%');
                             $('#movie__upload-progress').html(movieWhileProcessing.percent + '%');

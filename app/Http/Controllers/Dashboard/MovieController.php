@@ -52,7 +52,7 @@ class MovieController extends Controller
         ]);
 
         //the job in background
-        $this->dispatch(new StreamMovie($movie));
+        $this->dispatch(new StreamMovie($movie));//قمت بالنداء على الجوب
 
         return $movie;
 
